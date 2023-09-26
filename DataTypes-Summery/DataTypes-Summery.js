@@ -31,8 +31,32 @@ const myFunc = function() {
       console.log("Hello World");
 }
 
-myFunc()
+// myFunc()
 
 // console.log(typeof Obj);
 
 /******** Stack and Heap memory **********/
+
+// Stack (primitive), Heap(Non-Primitive);
+
+let myYoutubeName = "motivasional";
+let anotherName = myYoutubeName;
+anotherName = "Vinay Kumar";
+
+
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+
+let userOne = {
+      email: "user@google.com",
+      upi: "user@ypl",
+}
+
+let userTwo = userOne;
+
+userTwo.email = "vinay@goole.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
