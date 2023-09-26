@@ -14,7 +14,7 @@ let userEmail;
 // console.log(id === anotherId);
 
 const bigNumber = 34599846545456454542165n;
-console.log(bigNumber);
+// console.log(bigNumber);
 
 
 /**  Reference (Non primitive) */
@@ -33,5 +33,6 @@ const myFunc = function() {
 
 myFunc()
 
-console.log(typeof Obj);
+// console.log(typeof Obj);
 
+/******** Stack and Heap memory **********/
