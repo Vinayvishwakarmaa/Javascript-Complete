@@ -29,3 +29,5 @@ const url = "http://vinay.com/vinay%20vishwakarma";
 
 console.log(url.replace('%20', ' - '));
 console.log(url.includes('ma')); // true
+
+console.log(gameName.split('-'));
