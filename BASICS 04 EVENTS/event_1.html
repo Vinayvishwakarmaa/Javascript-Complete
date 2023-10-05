@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Html Events</title>
+</head>
+<body style="background-color: #414141; color: #fff; " >
+      <h2>Amazing Image</h2>
+      <ul id="images">
+      <li><img width="200px" src="https://cdn.pixabay.com/photo/2016/11/13/19/41/photoshop-1821854_640.jpg" id="photoshop" alt="photoshop"></li>
+      <li><img width="200px" src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758_1280.jpg" id="river" alt="river"></li>
+      <li><img width="200px" src="https://cdn.pixabay.com/photo/2016/08/11/23/48/mountains-1587287_640.jpg" id="lakes" alt="lakes"></li>
+      <li><img width="200px" src="https://cdn.pixabay.com/photo/2016/08/19/15/11/lost-1605501_1280.jpg" id="found" alt="found"></li>
+      <li><img width="200px" src="https://cdn.pixabay.com/photo/2017/11/07/00/07/fantasy-2925250_640.jpg" id="mountains" alt="mountains"></li>
+      <li><a href="https://google.com" id="google">Google</a></li>
+</ul>
+</body>
+<script>
+
+      //   document.getElementById("photoshop").onclick = function(){
+      //       alert("Photoshop Clicked");
+      //   };
+
+      //  Attachevent
+      // JQuery - on
+      // type
+      //   timestamp,defaultPreventd
+      // target,toElement,srcElement,currentTarget
+      // clientX,clientY,screenX,screenX, Interviews prepective se click kare  circle ban jaye
+      //  altKey,ctrlKey,shiftKey,KeyCode,
+      
+      //   Event propgastion
+
+      //  document.getElementById("photoshop").addEventListener("click",() =>{
+            //      alert("photoshop clicke")
+      //  })
+ 
+      // Event Propgation
+            // bubling jata false, pehle jo click karwa rhe tab woh main parent click karta hai 
+            // capchring true, pehle jata main click url uske baad jo click karwa yeh tab woh click hota 
+
+      //  document.getElementById("images").addEventListener("click",(e)=>{
+      //       console.log("Click inside the url");
+      //  },false )
+ 
+      //  document.getElementById("photoshop").addEventListener("click",(e)=>{
+      //       console.log("Click  photoshop");
+      //       e.stopPropagation()
+      //  },false )
+       
+       
+      //   document.getElementById('google').addEventListener('click',function(e){
+      //         e.preventDefault();
+      //         e.stopPropagation();
+      //     console.log("Google Clicked");  
+      //   },false)
+      
+   
+      
+       document.querySelector('#images').addEventListener('click',function(e){
+            // console.log(e.target.parentNode);
+            console.log(e.target.tagName) ;
+            if(e.target.tagName === 'IMG'){
+                  console.log(e.target.id);
+                  // e.target.id;
+                  let removeIt = e.target.parentNode
+                   removeIt.remove();
+            }
+      },false)
+      
+      // removeIt.parentNode.removeChild(removeIt);
+
+</script>
+</html>
